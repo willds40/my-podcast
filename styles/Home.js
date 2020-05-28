@@ -15,13 +15,10 @@ const styles = StyleSheet.create({
   button:{
     textAlign: 'center',
     margin:10,
-    backgroundColor: 'white',
-    borderRadius: 50
-    
+    backgroundColor: 'white',    
   },
   buttonText:{
     color: 'teal',
-    borerRadius:6,
     fontSize:20,
     backgroundColor: 'white'  
   }
