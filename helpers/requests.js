@@ -16,4 +16,4 @@ async function getEpisode (){
 
 };
 
-export default {getBestPodcasts, getCuratedPodcasts, getEpisode}
+export {getBestPodcasts, getCuratedPodcasts, getEpisode}
