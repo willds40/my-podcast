@@ -8,17 +8,17 @@ import {BestPodcastContext} from '../context/index';
 const EpisodeList = ({ navigation}) =>{
   const context = React.useContext(BestPodcastContext);
   const {bestPodcastData} = context
-  console.log("data", bestPodcastData)
+
+  const getCards = () =>{
+    const cards =   bestPodcastData.podcasts.map(podcast =>{
+      return <Card key={podcast.id} navigation={navigation}></Card>;
+    })
+    return cards; 
+  }
+
   return(
     <View>
-      <Card navigation={navigation}/>
-      <Card navigation={navigation}/>
-      <Card navigation={navigation}/>
-      <Card navigation={navigation}/>
-      <Card navigation={navigation}/>
-      <Card navigation={navigation}/>
-      <Card navigation={navigation}/>
-     
+     {getCards()}
     </View>
   )
 }
