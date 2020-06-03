@@ -1,4 +1,4 @@
-import React, {useState, createContext} from 'react'
+import React, {useState, createContext, useEffect} from 'react'
 
 const unirest = require('unirest');
 const BestPodcastContext = createContext();
@@ -14,11 +14,15 @@ const BestPodCastProvider = (props) => {
     updateBestPodcastData(response.body)
   };
 
+  useEffect(() => {
+    getBestPodcasts()
+  }, [])
+
     return(
         <BestPodcastContext.Provider value = 
         {{
           bestPodcastData,
-            getBestPodcasts
+          getBestPodcasts
           }}
         >
           {props.children}
