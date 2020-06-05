@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   descriptionView:{
     flex: 1,
     flexDirection: 'column',
+    padding:10,
   },
 
   title: {

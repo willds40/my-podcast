@@ -11,7 +11,7 @@ const EpisodeList = ({ navigation}) =>{
 
   const getCards = () =>{
     const cards =   bestPodcastData.podcasts.map(podcast =>{
-      return <Card key={podcast.id} navigation={navigation}></Card>;
+      return <Card title={podcast.title} description={podcast.description} thumbnail={podcast.thumbnail} key={podcast.id} navigation={navigation}></Card>;
     })
     return cards; 
   }
